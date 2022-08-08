@@ -694,6 +694,200 @@ header nav .form i {
   transform: translateX(-50%);
 }
 /* End Skills */
+/* Start Quote */
+.quote {
+  padding: var(--section-padding);
+  background-image: url(../images/quote.jpg);
+  background-size: cover; 
+  position: relative;
+  text-align: center; 
+  color: #fff;
+}
+.quote::before {
+  content: "";
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%;
+  height: 100%; 
+  background-color: rgba(0, 0, 0, 75%);
+}
+.quote .container {
+  position: relative; 
+}
+.quote .container q {
+  font-size: 30px; 
+  margin-bottom: 20px;
+  display: block;
+}
+.quote .container q::before {
+  font-family: 'Font Awesome 5 Free';
+  content: \f10d; 
+}
+.quote .container q::after {
+  font-family: 'Font Awesome 5 Free'; 
+  content: \f10e;
+}
+/* End Quote */
+/* Start Pricing */
+.pricing {
+  padding: var(--section-padding);
+  text-align: center;
+  /* All Text Will Be Inherit The Alignment */
+}
+/* .pricing .container {
+} */
+.pricing .container .plans {
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+.pricing .container .plans .plan {
+  border-top: 1px solid var(--main-color);
+  background-color: #fcfcfc;
+  text-align: center;
+}
+.pricing .container .plans .plan > .head, 
+.pricing .container .plans .plan > ul {
+  border-bottom: 1px solid var(--main-color);
+}
+.pricing .container .plans .plan .head {
+  padding: 40px 20px;
+}
+.pricing .container .plans .plan .head h3 {
+  font-weight: normal; 
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.pricing .container .plans .plan .head span {
+  font-size: 60px; 
+  font-weight: bold;
+}
+.pricing .container .plans .plan .head span::before {
+  content: "$";
+  font-size: 25px;
+  font-weight: normal;
+  position: relative;
+  top: -40px;
+  margin-right: 15px;
+}
+.pricing .container .plans .plan .head span::after {
+  content: "/Mo";
+  font-size: 20px;
+  position: relative;
+  right: -15px;
+}
+.pricing .container .plans .plan ul li {
+  padding: 20px; 
+  position: relative;
+}
+.pricing .container .plans .plan ul li:not(:last-child)::after {
+  content: "";
+  width: 140px;
+  height: 1px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  background-color: var(--main-color);
+} 
+.pricing .container .plans .plan .foot a {
+  display: block; 
+  width: fit-content; 
+  padding: 20px; 
+  border: 1px solid var(--main-color);
+  margin: 30px auto; 
+  text-decoration: none;
+}
+.pricing .container .contact-text {
+  margin: 50px 0 20px; 
+  font-size: 20px;
+}
+.pricing .container .contact-link {
+  display: block; 
+  width: fit-content; 
+  margin: 20px auto;
+  background-color: var(--main-color);
+  text-decoration: none;
+  padding: 15px 30px;
+  color: #fff;
+}
+/* End Pricing */
+/* Start Subscribe */
+.subscribe {
+  padding: var(--section-padding); 
+  background-image: url(../images/subscribe.jpg);  
+  background-size: cover; 
+  position: relative; 
+  color: #fff; 
+}
+.subscribe::before {
+  content: "";
+  position: absolute; 
+  left: 0; 
+  top: 0; 
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(0, 0, 0, 50%);  
+}
+.subscribe .container {
+  position: relative;
+  display: flex; 
+  align-items: center;
+}
+@media (max-width: 991px) {
+  .subscribe .container {
+    flex-direction: column;
+  }
+}
+.subscribe form {
+  display: flex; 
+  position: relative;
+  width: 500px; 
+  max-width: 100%;
+}
+.subscribe form i {
+  position: absolute;
+  top: 50%; 
+  left: 25px; 
+  transform: translateY(-50%);
+}
+.subscribe form input[type="email"] {
+  color: #fff;
+  padding: 20px 20px 20px 60px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-right: none;
+  caret-color: var(--main-color);
+  width: calc(100% - 130px);
+}
+.subscribe form ::placeholder {
+  color: #fff; 
+}
+.subscribe form input[type="submit"] {
+  width: 130px;
+  border: 1px solid #fff;
+  border-left: none;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: var(--main-color);
+  text-transform: uppercase;
+}
+.subscribe form input[type="email"]:focus, 
+.subscribe form input[type="submit"]:focus {
+  outline: none;
+}
+.subscribe .container p {
+  line-height: 2;
+  margin-left: 50px;
+}
+@media (max-width: 991px) {
+  .subscribe .container p {
+    margin: 30px 0 0;
+    text-align: center;
+  } 
+}
+/* End Subscribe */
 
 
 
