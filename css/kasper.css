@@ -46,7 +46,7 @@ ul {
 /* Large Screens */
 @media (min-width: 1200px) {
   .container {
-    width: 1117px;
+    width: 1170px;
   }
 }
 /* End Global Rules */
@@ -56,7 +56,7 @@ ul {
 }
 .main-heading h2 {
   font-weight: normal;
-  font-size: 50px;
+  font-size: 40px;
   position: relative;
   margin-bottom: 70px;
   text-transform: uppercase;
@@ -757,7 +757,7 @@ header nav .form i {
 .pricing .container .plans .plan .head h3 {
   font-weight: normal; 
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .pricing .container .plans .plan .head span {
   font-size: 60px; 
@@ -892,9 +892,6 @@ header nav .form i {
 .contact {
   padding: var(--section-padding);
 }
-/* .contact .container {
-
-} */
 .contact .content {
   display: flex; 
   justify-content: space-between;
@@ -904,28 +901,21 @@ header nav .form i {
     flex-direction: column;
     /* You Can Use Column Reverse Instead Of Using Order */
   }
-  .contact .content form input[type="submit"] {
-    margin: auto;
-  }
-  .contact .content .info {
-    order: -1;
-    text-align: center;
-    margin-bottom: 40px;
-  }
 }
 .contact .content form {
   flex-basis: 70%;
 }
-.contact .content form input:not(:last-child), 
-.contact .content form textarea {
+.contact .content .main-input {
   display: block;
   width: 100%;
-  outline: none; 
   border: 1px solid #ccc;
   padding: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
-.contact .content form textarea {
+.contact .content .main-input:focus {
+  outline: none;
+}
+.contact .content form textarea.main-input {
   height: 200px;
 }
 .contact .content form input[type="submit"] {
@@ -941,30 +931,50 @@ header nav .form i {
 .contact .content .info {
   flex-basis: 25%;
 }
+@media (max-width: 767px) {
+  .contact .container .info {
+    order: -1;
+    display: flex;
+    align-items: center; 
+    justify-content: space-evenly;
+    text-align: center; 
+  }
+}
+@media (max-width: 767px) {
+  .contact .content .info .phone-number, 
+  .contact .content .info .place {
+    flex-basis: 45%;
+  }
+}
 .contact .content .info h4 {
   font-size: 18px; 
   font-weight: normal; 
   text-transform: uppercase; 
   margin-bottom: 30px;
 }
-.contact .content .info span {
+.contact .content .info .phone {
   display: block;
   margin-bottom: 10px; 
   color: var(--Paragraph-color);
 }
-.contact .content .info h4:last-of-type {
+.contact .content .info .place h4 {
   margin: 90px 0 30px;
 }
 .contact .content .info address {
   color: var(--Paragraph-color); 
   line-height: 2;
 }
+@media (max-width: 767px) {
+  .contact .content .info address {
+    margin-bottom: 40px;
+  }
+}
 /* End Contact */
 /* Start Footer */
 .footer {
+  padding: calc(100px / 2) 0;
   background-image: url(../images/subscribe.jpg);
   background-size: cover;
-  padding: var(--section-padding);
   position: relative;
   text-align: center;
   color: #fff;
@@ -984,7 +994,7 @@ header nav .form i {
 .footer img {
   margin-bottom: 20px;
 } 
-.footer p:first-of-type {
+.footer p:not(.copyright) {
   padding: 20px; 
   margin: 20px auto;
   font-size: 22px; 
@@ -992,13 +1002,13 @@ header nav .form i {
   border-bottom: 1px solid #fff;
   width: fit-content;
 }
-.footer i {
+.footer .social-icons i {
   padding: 10px 15px;
 }
-.footer p:last-of-type {
+.footer .copyright {
   margin-top: 60px; 
 }
-.footer p:last-of-type span {
+.footer .copyright span {
   font-weight: bold; 
   color: var(--main-color);
 }
