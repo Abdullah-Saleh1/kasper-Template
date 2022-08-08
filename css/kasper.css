@@ -899,6 +899,20 @@ header nav .form i {
   display: flex; 
   justify-content: space-between;
 }
+@media (max-width: 767px) {
+  .contact .content {
+    flex-direction: column;
+    /* You Can Use Column Reverse Instead Of Using Order */
+  }
+  .contact .content form input[type="submit"] {
+    margin: auto;
+  }
+  .contact .content .info {
+    order: -1;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
 .contact .content form {
   flex-basis: 70%;
 }
@@ -989,7 +1003,3 @@ header nav .form i {
   color: var(--main-color);
 }
 /* End Footer */
-
-
-
-
